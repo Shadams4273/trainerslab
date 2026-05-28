@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | TrainersLab",
@@ -78,76 +79,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right — form */}
-          <form className="flex flex-col gap-0 border border-[#E5E5E5]">
-            <div className="grid sm:grid-cols-2 gap-px bg-[#E5E5E5]">
-              <div className="bg-white">
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  className="w-full px-5 py-4 text-sm text-[#111111] placeholder-[#D4D4D4] font-body outline-none bg-white focus:bg-[#F5F5F4] transition-colors"
-                />
-              </div>
-              <div className="bg-white">
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  className="w-full px-5 py-4 text-sm text-[#111111] placeholder-[#D4D4D4] font-body outline-none bg-white focus:bg-[#F5F5F4] transition-colors"
-                />
-              </div>
-            </div>
-
-            <div className="border-t border-[#E5E5E5]">
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full px-5 py-4 text-sm text-[#111111] placeholder-[#D4D4D4] font-body outline-none bg-white focus:bg-[#F5F5F4] transition-colors"
-              />
-            </div>
-
-            <div className="border-t border-[#E5E5E5]">
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full px-5 py-4 text-sm text-[#111111] placeholder-[#D4D4D4] font-body outline-none bg-white focus:bg-[#F5F5F4] transition-colors"
-              />
-            </div>
-
-            <div className="border-t border-[#E5E5E5]">
-              <select className="w-full px-5 py-4 text-sm text-[#D4D4D4] font-body outline-none bg-white focus:bg-[#F5F5F4] transition-colors appearance-none cursor-pointer">
-                <option value="">Preferred Location</option>
-                <option value="mtjuliet">Mount Juliet, TN</option>
-                <option value="hiltonhead">Hilton Head, SC</option>
-                <option value="jacksonville">Jacksonville, NC</option>
-              </select>
-            </div>
-
-            <div className="border-t border-[#E5E5E5]">
-              <select className="w-full px-5 py-4 text-sm text-[#D4D4D4] font-body outline-none bg-white focus:bg-[#F5F5F4] transition-colors appearance-none cursor-pointer">
-                <option value="">I&apos;m interested in...</option>
-                <option value="personal">Personal Training</option>
-                <option value="strength">Strength &amp; Conditioning</option>
-                <option value="nutrition">Nutrition Coaching</option>
-                <option value="group">Group Training</option>
-              </select>
-            </div>
-
-            <div className="border-t border-[#E5E5E5]">
-              <textarea
-                rows={4}
-                placeholder="Tell us about your goals..."
-                className="w-full px-5 py-4 text-sm text-[#111111] placeholder-[#D4D4D4] font-body outline-none bg-white focus:bg-[#F5F5F4] transition-colors resize-none"
-              />
-            </div>
-
-            <div className="border-t border-[#E5E5E5]">
-              <button
-                type="submit"
-                className="w-full bg-[#111111] hover:bg-[#333333] text-white font-display font-700 text-[0.7rem] tracking-[0.2em] uppercase py-5 transition-colors"
-              >
-                Send Message
-              </button>
-            </div>
-          </form>
+          <ContactForm />
         </div>
       </section>
     </>

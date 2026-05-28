@@ -19,6 +19,8 @@ const locations = [
     instagram: "@trainerslabmtjuliet",
     instagramUrl: "https://instagram.com/trainerslabmtjuliet",
     mapUrl: "https://maps.google.com/?q=1730+N+Mt+Juliet+Rd+Mount+Juliet+TN+37122",
+    mapEmbedUrl:
+      "https://maps.google.com/maps?q=1730+N+Mt+Juliet+Rd+Mount+Juliet+TN+37122&t=&z=15&ie=UTF8&iwloc=&output=embed",
     note: null,
   },
   {
@@ -32,6 +34,8 @@ const locations = [
     instagram: "@trainerslabwexford",
     instagramUrl: "https://instagram.com/trainerslabwexford",
     mapUrl: "https://maps.google.com/?q=1000+William+Hilton+Pkwy+Hilton+Head+Island+SC+29928",
+    mapEmbedUrl:
+      "https://maps.google.com/maps?q=1000+William+Hilton+Pkwy+Hilton+Head+Island+SC+29928&t=&z=15&ie=UTF8&iwloc=&output=embed",
     note: null,
   },
   {
@@ -45,6 +49,8 @@ const locations = [
     instagram: null,
     instagramUrl: null,
     mapUrl: "https://maps.google.com/?q=104+N+Marine+Blvd+Jacksonville+NC+28540",
+    mapEmbedUrl:
+      "https://maps.google.com/maps?q=104+N+Marine+Blvd+Jacksonville+NC+28540&t=&z=15&ie=UTF8&iwloc=&output=embed",
     note: "Located inside Courts Plus",
   },
 ];
@@ -86,10 +92,11 @@ export default function LocationsPage() {
           {locations.map((loc, i) => (
             <div
               key={loc.number}
-              className={`grid md:grid-cols-[100px_1fr_1fr] gap-6 p-6 md:p-10 ${
+              className={`p-6 md:p-10 ${
                 i < locations.length - 1 ? "border-b border-[#E5E5E5]" : ""
               }`}
             >
+              <div className="grid md:grid-cols-[100px_1fr_1fr] gap-6">
               {/* Number */}
               <div className="font-display text-[3.5rem] font-800 leading-none text-[#E5E5E5] select-none">
                 {loc.number}
@@ -165,6 +172,18 @@ export default function LocationsPage() {
                     </a>
                   </div>
                 )}
+              </div>
+              </div>
+
+              {/* Map */}
+              <div className="mt-8 border border-[#E5E5E5]">
+                <iframe
+                  src={loc.mapEmbedUrl}
+                  title={`Map of TrainersLab ${loc.city}`}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-[320px] md:h-[380px] block grayscale hover:grayscale-0 transition-[filter] duration-500"
+                />
               </div>
             </div>
           ))}
