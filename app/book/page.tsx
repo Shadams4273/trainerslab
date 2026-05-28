@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+import Script from "next/script";
+
+export const metadata: Metadata = {
+  title: "Book a Session | TrainersLab",
+  description:
+    "Schedule your TrainersLab session. A coach will confirm shortly.",
+};
+
 export default function BookPage() {
   return (
     <div className="min-h-screen bg-white py-24">
@@ -15,15 +24,17 @@ export default function BookPage() {
           Select a time below and a coach will confirm your session shortly.
         </p>
 
-        {/* GHL Calendar Embed */}
-        <div className="w-full min-h-[600px] border-2 border-dashed border-[#E5E5E5] flex flex-col items-center justify-center gap-3 bg-[#F5F5F4]">
-          <div className="font-display text-[0.65rem] tracking-[0.3em] uppercase text-[#737373]">
-            GHL Calendar Embed
-          </div>
-          <p className="text-sm text-[#737373] font-body">
-            Replace with your GoHighLevel calendar embed code
-          </p>
-        </div>
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/booking/cnyedbykQ3ZPNn2rhRPy"
+          id="cnyedbykQ3ZPNn2rhRPy_1779987345208"
+          title="TrainersLab booking calendar"
+          className="w-full border-0 overflow-hidden"
+          style={{ minHeight: 600 }}
+        />
+        <Script
+          src="https://link.msgsndr.com/js/form_embed.js"
+          strategy="afterInteractive"
+        />
       </div>
     </div>
   );
