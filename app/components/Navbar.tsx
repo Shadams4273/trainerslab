@@ -23,12 +23,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-16 md:h-24 flex items-center justify-between">
         <Link href="/">
           <Image
-            src="/TrainerTrans.png"
+            src="/images/TLLogoNew.png"
             alt="Trainers Lab"
             width={0}
             height={0}
             sizes="100vw"
-            className="h-10 md:h-20 w-auto"
+            className="h-8 md:h-12 w-auto"
           />
         </Link>
 
