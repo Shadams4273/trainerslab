@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
@@ -19,10 +20,17 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           <div>
-            <Link href="/" className="font-display text-2xl font-800 uppercase tracking-widest text-[#111111]">
-              Trainers<span className="border-b-2 border-[#111111]">Lab</span>
+            <Link href="/" className="inline-block">
+              <Image
+                src="/images/TLLogoNew.png"
+                alt="Trainers Lab"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="h-10 w-auto"
+              />
             </Link>
-            <p className="text-sm text-[#737373] mt-3 leading-relaxed font-body max-w-xs">
+            <p className="text-sm text-[#737373] mt-4 leading-relaxed font-body max-w-xs">
               Redefining personal fitness through high-end training. Three locations across the Southeast.
             </p>
           </div>
