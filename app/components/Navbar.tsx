@@ -37,7 +37,7 @@ export default function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className={`font-display text-[1.05rem] font-700 tracking-[0.15em] uppercase transition-colors ${
+              className={`font-display text-[0.85rem] font-700 tracking-[0.15em] uppercase transition-colors ${
                 pathname === l.href
                   ? "text-[#111111]"
                   : "text-[#737373] hover:text-[#111111]"
@@ -48,7 +48,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/contact"
-            className="bg-[#111111] hover:bg-[#333333] text-white font-display font-700 text-[1.05rem] tracking-[0.15em] uppercase px-6 py-3 transition-colors"
+            className="bg-[#111111] hover:bg-[#333333] text-white font-display font-700 text-[0.85rem] tracking-[0.15em] uppercase px-6 py-3 transition-colors"
           >
             Get Started
           </Link>
@@ -78,7 +78,7 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="font-display text-[1.05rem] font-700 tracking-[0.15em] uppercase text-[#737373] hover:text-[#111111] transition-colors"
+              className="font-display text-[0.85rem] font-700 tracking-[0.15em] uppercase text-[#737373] hover:text-[#111111] transition-colors"
             >
               {l.label}
             </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="bg-[#111111] text-white font-display font-700 text-[1.05rem] tracking-[0.15em] uppercase px-5 py-3 text-center transition-colors"
+            className="bg-[#111111] text-white font-display font-700 text-[0.85rem] tracking-[0.15em] uppercase px-5 py-3 text-center transition-colors"
           >
             Get Started
           </Link>
