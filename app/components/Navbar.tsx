@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <header className="border-b border-[#E5E5E5] bg-white sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 h-16 md:h-24 flex items-center justify-between">
+      <div className="px-6 md:px-10 h-24 md:h-40 flex items-center justify-between">
         <Link href="/">
           <Image
             src="/images/TLLogoNew.png"
@@ -28,16 +28,16 @@ export default function Navbar() {
             width={0}
             height={0}
             sizes="100vw"
-            className="h-8 md:h-12 w-auto"
+            className="h-16 md:h-28 w-auto"
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-9">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className={`font-display text-[0.7rem] font-700 tracking-[0.15em] uppercase transition-colors ${
+              className={`font-display text-[1.05rem] font-700 tracking-[0.15em] uppercase transition-colors ${
                 pathname === l.href
                   ? "text-[#111111]"
                   : "text-[#737373] hover:text-[#111111]"
@@ -48,7 +48,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/contact"
-            className="bg-[#111111] hover:bg-[#333333] text-white font-display font-700 text-[0.7rem] tracking-[0.15em] uppercase px-5 py-2.5 transition-colors"
+            className="bg-[#111111] hover:bg-[#333333] text-white font-display font-700 text-[1.05rem] tracking-[0.15em] uppercase px-6 py-3 transition-colors"
           >
             Get Started
           </Link>
@@ -78,7 +78,7 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="font-display text-[0.7rem] font-700 tracking-[0.15em] uppercase text-[#737373] hover:text-[#111111] transition-colors"
+              className="font-display text-[1.05rem] font-700 tracking-[0.15em] uppercase text-[#737373] hover:text-[#111111] transition-colors"
             >
               {l.label}
             </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="bg-[#111111] text-white font-display font-700 text-[0.7rem] tracking-[0.15em] uppercase px-5 py-3 text-center transition-colors"
+            className="bg-[#111111] text-white font-display font-700 text-[1.05rem] tracking-[0.15em] uppercase px-5 py-3 text-center transition-colors"
           >
             Get Started
           </Link>
